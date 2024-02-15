@@ -1,0 +1,149 @@
+/** https://www.w3schools.com/cssref/sel_root.php */
+:root {
+  --bg-color: #e55c8a;
+  --bg-main: #3c424a;
+  --bg-input: #0000004d;
+  --bg-logout-btn: #f7d7e0;
+  --bg-login-btn: #eb2466;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+}
+
+button {
+  background-color: var(--bg-login-btn);
+  color: white;
+  border: 0;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+main {
+  max-width: 600px;
+  width: 100%;
+  max-height: 400px;
+  background-color: var(--bg-main);
+  box-shadow: 0 0 7px 7px rgb(0 0 0 / 20%);
+  border-radius: 4px;
+  color: white;
+  padding: 20px;
+  margin: 0 10px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: purple white;
+}
+
+.main-container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  outline: none;
+  border: none;
+  background-color: var(--bg-input);
+  font-weight: bold;
+  padding: 10px;
+  color: white;
+  width: 100%;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/*?--------------- login.html && register.html --------------------*/
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.btn-logout {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: var(--bg-logout-btn);
+  color: black;
+}
+
+.btn-logout:hover {
+  opacity: 0.8;
+}
+
+small {
+  text-align: center;
+  display: block;
+  padding-top: 10px;
+}
+
+small a {
+  cursor: pointer;
+  color: lightblue;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/*?------------------- home.html --------------- */
+
+.add-todo {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 0.5px solid lightgray;
+}
+
+.todo-item button {
+  color: var(--bg-color);
+  background: transparent;
+  font-weight: 300;
+  border: 1px solid;
+  border-radius: 2px;
+  padding: 6px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  margin-left: 5px;
+}
+
+.todo-item button:hover {
+  color: white;
+}
+
+.done {
+  text-decoration: line-through;
+}
